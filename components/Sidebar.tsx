@@ -28,11 +28,13 @@ function Sidebar({ children }: ISidebar) {
   ];
   return (
     <div className="flex h-full">
-      <div className="hidden md:flex flex-col space-y-2 bg-black h-full w-[300px] p-2">
+      <div className="hidden md:flex flex-col space-y-2 bg-black h-full w-[300px] p-2  ">
         <Box>
-          {routes.map((item) => (
-            <SidebarItem key={item.name} {...item} />
-          ))}
+          <div className="flex flex-col py-4 px-4 gap-y-4">
+            {routes.map((item) => (
+              <SidebarItem key={item.name} {...item} />
+            ))}
+          </div>
         </Box>
         <Box className="h-full overflow-y-auto ">
           <Library />
